@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Estudiantes</title>
+    <link rel="stylesheet" href="./estilos/style-guide-centro-estudiantes.css">
+    <link rel="stylesheet" href="./estilos/estilosindex.css">
+</head>
+<body>
+    <header>
+        <div class="headerimglogo">
+            <img src="./img/insigniaESVO-removebg-preview.png" alt="Logo de la escuela ESVO">
+        </div>
+        <div class="headertitulo">
+            <h1>Colegio Secundario Barrio Vuelta al Ombú<br> Centro de Estudiantes</h1>
+        </div>
+        <div class="headerimgcentro">
+            <img src="img/logo-centro.png" alt="Logo del centro de estudiantes">
+        </div>
+    </header>
+
+    <div class="main-container"> <!-- Contenedor para aside y main -->
+        <aside>
+            <nav>
+                <ul>
+                    <li><a href="#eventos">Eventos</a></li>
+                    <li><a href="#comunicados">Comunicados</a></li>
+                    <li><a href="#en-accion">En acción</a></li>
+                    <li><a href="#contacto-form">Contacto</a></li>
+                    <li><a href="./pages/login.html">Iniciar sesión</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main>
+            <section id="eventos">
+                <h2>Eventos</h2>
+                <p>En esta sección se mostrarán los eventos que se realicen en la escuela.</p>
+                <div class="card-container">
+                    <article class="card">
+                        <h3>Evento 1</h3>
+                        <img src="img/evento1.jpg" alt="Imagen del evento 1">
+                        <p>Descripción del evento 1</p>
+                    </article>
+                    <!-- Más tarjetas -->
+                </div>
+            </section>
+
+            <section id="comunicados">
+                <h2>Comunicados</h2>
+                <p>En esta sección se mostrarán los comunicados oficiales.</p>
+                <div class="card-container">
+                    <article class="card">
+                        <h3>Comunicado 1</h3>
+                        <img src="img/comunicado1.jpg" alt="Imagen del comunicado 1">
+                        <p>Descripción del comunicado 1</p>
+                    </article>
+                    <!-- Más tarjetas -->
+                </div>
+            </section>
+
+            <section id="en-accion">
+                <h2>En acción</h2>
+                <p>Actividades realizadas por el Centro de Estudiantes.</p>
+                <div class="card-container">
+                    <article class="card">
+                        <h3>Actividad 1</h3>
+                        <img src="img/actividad1.jpg" alt="Imagen de la actividad 1">
+                        <p>Descripción de la actividad 1</p>
+                    </article>
+                    <!-- Más tarjetas -->
+                </div>
+            </section>
+        </main>
+    </div> <!-- Cierre de main-container -->
+
+    <footer>
+        <form action="scripts/contacto.php" method="post" id ="contacto-form">
+            <h2>Déjanos tu mensaje</h2>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <div class="social-media">
+            <a href="#" target="_blank" aria-label="Facebook">
+                <img src="img/facebook-icon.png" alt="Facebook">
+            </a>
+            <a href="#" target="_blank" aria-label="Instagram">
+                <img src="img/instagram-icon.png" alt="Instagram">
+            </a>
+            <a href="#" target="_blank" aria-label="Twitter">
+                <img src="img/twitter-icon.png" alt="Twitter">
+            </a>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Centro de Estudiantes ESVO. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,100 @@
+/* ======= Style Guide - Centro de Estudiantes ======= */
+
+/* === Colores Institucionales === */
+:root {
+    --verde-oscuro: #2b5d34;     /* Tronco del árbol / Bordes */
+    --verde-medio:  #6abc74;     /* Fondo del escudo */
+    --verde-claro:  #a8ddb5;     /* Hojas claras */
+    --amarillo:     #f5c518;     /* Detalles y letras */
+    --negro:        #000000;
+    --blanco:       #ffffff;
+
+    --fuente-principal: 'Segoe UI', sans-serif;
+}
+
+/* === Tipografía === */
+body {
+    font-family: var(--fuente-principal);
+    color: var(--negro);
+    background-color: var(--blanco);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: var(--verde-oscuro);
+    margin-bottom: 0.5em;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* === Botones === */
+.boton-principal {
+    background-color: var(--amarillo);
+    color: var(--negro);
+    padding: 0.6em 1.2em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.boton-principal:hover {
+    background-color: var(--verde-medio);
+    color: var(--blanco);
+}
+
+.boton-secundario {
+    background-color: var(--verde-claro);
+    color: var(--verde-oscuro);
+    padding: 0.6em 1.2em;
+    border: 2px solid var(--verde-oscuro);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* === Tarjetas / Bloques === */
+.tarjeta {
+    background-color: var(--verde-medio);
+    padding: 1em;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: var(--negro);
+    margin-bottom: 1em;
+}
+
+/* === Enlaces === */
+a {
+    color: var(--verde-oscuro);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--amarillo);
+}
+
+/* === Contenedores === */
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 2em;
+}
+
+.header {
+    background-color: var(--verde-oscuro);
+    color: var(--blanco);
+    padding: 1em;
+    text-align: center;
+}
+
+.footer {
+    background-color: var(--verde-claro);
+    padding: 1em;
+    text-align: center;
+    font-size: 0.9em;
+    color: var(--verde-oscuro);
+}

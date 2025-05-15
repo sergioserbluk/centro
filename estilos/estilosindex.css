@@ -1,0 +1,217 @@
+/* === Estilos Generales === */
+body {
+    margin: 0;
+    font-family: var(--fuente-principal);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blanco);
+    color: var(--negro);
+    min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la ventana */
+}
+
+/* === Cabecera === */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--verde-oscuro);
+    color: var(--blanco);
+    padding: 1rem;
+}
+
+h1 {
+    color: var(--blanco);
+    text-align: center;
+}
+h2{
+    color: var(--verde-oscuro);
+}
+header img{
+    width: 100px;
+    height: 120px;
+    margin-left: 30px;
+    margin-right: 30px;
+
+}
+
+/* === Barra Lateral === */
+aside {
+    width: 250px;
+    background-color: var(--verde-claro);
+    padding: 20px;
+    height: 100vh; /* Asegura que el aside ocupe toda la altura de la ventana */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Sombra a la derecha */
+    position: sticky; /* Permite que el aside quede fijo mientras se hace scroll */
+    top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    margin-bottom: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--verde-oscuro);
+    font-size: 18px;
+    display: block;
+}
+
+nav ul li a:hover {
+    color: var(--amarillo);
+}
+
+/* === Contenedor Principal === */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-grow: 1; /* Asegura que el contenedor principal ocupe el espacio restante */
+}
+
+/* Estilo del main (contenido principal) */
+main {
+    flex-grow: 1; /* El main ocupará el espacio restante */
+    padding: 20px;
+    background-color: var(--blanco);
+    overflow: auto; /* Permite el scroll en caso de que el contenido sea largo */
+}
+
+/* Estilo de las secciones dentro del main */
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--blanco);
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: calc(33% - 20px);
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+/* === Pie de Página === */
+footer {
+    background-color: var(--verde-oscuro);
+    color: var(--blanco);
+    padding: 2rem;
+    text-align: center;
+}
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    width: 50%;
+    margin: 0 auto; /* Centra el formulario en el pie de página */
+    border-radius: 9px;
+    padding: 20px;
+    background-color: var(--verde-claro);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border: 1px solid var(--verde-oscuro); /* Borde del formulario */
+
+ 
+}
+
+/* Formulario de pie de página */
+footer form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+footer input,
+footer textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: none;
+}
+
+/* Botón en el pie de página */
+footer button {
+    background-color: var(--amarillo);
+    color: var(--negro);
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+footer button:hover {
+    background-color: var(--verde-medio);
+    color: var(--blanco);
+}
+header p a{
+    background-color: var(--blanco);
+    border-radius: 3px;
+}
+
+/* Enlaces en las redes sociales */
+footer .social-media {
+    margin-top: 2rem;
+}
+
+footer .social-media a {
+    margin: 0 0.5rem;
+    color: var(--blanco);
+    font-weight: bold;
+}
+
+footer .social-media a:hover {
+    color: var(--amarillo);
+}
+
+/* Copyright */
+footer .copyright {
+    margin-top: 1rem;
+    font-size: 0.9em;
+}
+
+/* === Ajustes Responsivos === */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column; /* Coloca los elementos uno debajo del otro en pantallas pequeñas */
+    }
+
+    aside {
+        width: 100%; /* El aside ocupa el 100% en pantallas pequeñas */
+        height: auto; /* No es necesario que ocupe toda la altura */
+        position: relative; /* No será sticky en pantallas pequeñas */
+    }
+
+    main {
+        padding-top: 20px; /* Agrega espacio encima en pantallas pequeñas */
+    }
+
+    .card {
+        width: 100%; /* Las tarjetas ocupan todo el ancho en pantallas pequeñas */
+    }
+}
