@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         exit;
     } else {
         //redirect to login page with error
-        header("Location: ../pages/index.html?error=1");
+        header("Location: ../index.php?error=1");
     }
 }
 ?>

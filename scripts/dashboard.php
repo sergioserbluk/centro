@@ -104,7 +104,7 @@ try {
 <div class="main-container">
 
     <main>
-    
+    <div class="ochentaporcent">
         
         <p>Panel de control para gestionar publicaciones y categorías.</p>
     
@@ -161,7 +161,7 @@ try {
         <?php endforeach; ?>
     </tbody>
     </table>
-
+            </div>
     </main>
     </div>
     <footer>

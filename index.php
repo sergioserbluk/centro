@@ -68,9 +68,9 @@
     <aside>
         <nav>
             <ul>
-                <li><a href="#eventos">Eventos</a></li>
-                <li><a href="#comunicados">Comunicados</a></li>
-                <li><a href="#en-accion">En acción</a></li>
+                <li><a href="#Eventos">Eventos</a></li>
+                <li><a href="#Comunicados">Comunicados</a></li>
+                <li><a href="#En acción">En acción</a></li>
                 <li><a href="#contacto-form">Contacto</a></li>
                 <li><a href="./pages/login.html">Iniciar sesión</a></li>
             </ul>
@@ -85,7 +85,7 @@
             $stmt->execute([$categoria]);
             $publicaciones = $stmt->fetchAll();
 
-            echo "<section id=\"$categoria\">";
+            echo "<section id=\"$tituloSeccion\">";
             echo "<h2>$tituloSeccion</h2>";
             echo "<div class=\"card-container\">";
 
@@ -133,8 +133,8 @@
         <a href="#" target="_blank" aria-label="Facebook">
             <img src="img/facebook-icon.png" alt="Facebook">
         </a>
-        <a href="#" target="_blank" aria-label="Instagram">
-            <img src="img/instagram-icon.png" alt="Instagram">
+        <a href="./img/instagram-icon.png" target="_blank" aria-label="Instagram">
+            <img src="img/instagram.svg" alt="Instagram">
         </a>
         <a href="#" target="_blank" aria-label="Twitter">
             <img src="img/twitter-icon.png" alt="Twitter">

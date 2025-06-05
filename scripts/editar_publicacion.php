@@ -33,11 +33,32 @@ try {
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="../img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../estilos/style-guide-centro-estudiantes.css">
+    <link rel="stylesheet" href="../estilos/estilosindex.css">
+    <link rel="stylesheet" href="../estilos/estilos.css">
     <title>Editar Publicación</title>
 </head>
 <body>
-    <h1>Editar publicación</h1>
-    <form action="procesar_editar_publicacion.php" method="post" enctype="multipart/form-data">
+    <header>
+        <h1>Centro de Estudiantes</h1>
+        </header>
+       <div class="main-container">
+           
+        <aside>   
+        <nav>
+            <ul>
+                <li><a href="dashboard.php">Inicio</a></li>
+                <li><a href="crear_publicacion.php">Crear Publicación</a></li>
+                <li><a href="editar_publicacion.php?id=<?= $id_publicacion ?>">Editar Publicación</a></li>
+                <li><a href="cerrar_sesion.php">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+        </aside>
+    
+        <main>
+      
+    <h2>Editar publicación</h2>
+    <form class="form-editarpublicacion" action="procesar_editar_publicacion.php" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?= $publicacion['id'] ?>">
 
         <label for="titulo">Título:</label>
@@ -62,6 +83,8 @@ try {
         <button type="submit">Guardar cambios</button>
     </form>
 
-    <p><a href="tablero.php">← Volver al panel</a></p>
+    <p><a href="dashboard.php">← Volver al panel</a></p>
+    </main>
+     </div>
 </body>
 </html>

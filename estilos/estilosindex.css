@@ -74,6 +74,27 @@ nav ul li a:hover {
     flex-grow: 1; /* Asegura que el contenedor principal ocupe el espacio restante */
 }
 
+.ochentaporcent {
+    width: 80%;
+    background-color: rgb(249, 242, 242);
+    border-radius: 8px;
+    border-color: darkcyan
+    border-width: 2px;
+    border-style: solid;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin: auto;
+}
+.form-editarpublicacion {
+    width: 80%;
+    border-color: darkcyan;
+    border-radius: 9px;
+    border-width: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25 rem;/* Espacio entre los elementos */
+}
+
 /* Estilo del main (contenido principal) */
 main {
     flex-grow: 1; /* El main ocupará el espacio restante */
