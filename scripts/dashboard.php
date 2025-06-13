@@ -24,7 +24,7 @@ $mensaje = isset($_GET['mensaje']) ? $_GET['mensaje'] : null;
 
 // Traer mensajes del formulario de contacto
 try {
-    $stmt_mensajes = $pdo->query("SELECT * FROM mensajes_contacto ORDER BY fecha_envio DESC");
+    $stmt_mensajes = $pdo->query("SELECT m.*, u.nombre_usuario AS respondido_por FROM mensajes_contacto m LEFT JOIN usuarios u ON m.id_usuario_respuesta = u.id ORDER BY m.fecha_envio DESC");
     $mensajes_contacto = $stmt_mensajes->fetchAll();
 } catch (PDOException $e) {
     die("Error al obtener mensajes: " . $e->getMessage());
@@ -143,6 +143,7 @@ try {
             <th>Mensaje</th>
             <th>Fecha</th>
             <th>Respuesta</th>
+            <th>Respondido por</th>
             <th>Acciones</th>
         </tr>
     </thead>
@@ -154,6 +155,7 @@ try {
             <td><?= nl2br(htmlspecialchars($msg['mensaje'])) ?></td>
             <td><?= $msg['fecha_envio'] ?></td>
             <td><?= $msg['respuesta'] ? nl2br(htmlspecialchars($msg['respuesta'])) : 'Sin responder' ?></td>
+            <td><?= htmlspecialchars($msg['respondido_por'] ?? '') ?></td>
             <td>
                 <a href="responder_mensaje.php?id=<?= $msg['id'] ?>">Responder</a>
             </td>
