@@ -4,7 +4,7 @@ require_once 'conexion.php';
 require_once 'validar_sesion.php';
 
 if (!isset($_GET['id'])) {
-    header("Location: tablero.php");
+    header("Location: dashboard.php");
     exit();
 }
 
@@ -50,7 +50,7 @@ try {
                 <li><a href="dashboard.php">Inicio</a></li>
                 <li><a href="crear_publicacion.php">Crear Publicación</a></li>
                 <li><a href="editar_publicacion.php?id=<?= $id_publicacion ?>">Editar Publicación</a></li>
-                <li><a href="cerrar_sesion.php">Cerrar Sesión</a></li>
+                <li><a href="logout.php">Cerrar Sesión</a></li>
             </ul>
         </nav>
         </aside>
