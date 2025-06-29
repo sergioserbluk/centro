@@ -1,0 +1,37 @@
+{
+  "autoridades": [
+    {
+      "id": 1,
+      "cargo": "Presidencia",
+      "nombre": "Juan Gomez",
+      "subordinados": [
+        {
+          "id": 2,
+          "cargo": "Vicepresidencia",
+          "nombre": "Maria Becerra"
+        },
+        {
+          "id": 3,
+          "cargo": "Secretaría General",
+          "nombre": "Estaban Fuentes"
+        },
+        {
+          "id": 4,
+          "cargo": "Tesorería",
+          "nombre": "Carla Gomez"
+        },
+        {
+          "id": 5,
+          "cargo": "Vocalía",
+          "miembros": [
+            { "id": 6,  "nombre": "Pedro Pe" },
+            { "id": 7,  "nombre": "Ana Stacia" },
+            { "id": 8,  "nombre": "Rosa Reun" },
+            { "id": 9,  "nombre": "Gonzalo Jez" },
+            { "id": 10, "nombre": "Carlos Magno" }
+          ]
+        }
+      ]
+    }
+  ]
+}
