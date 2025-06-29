@@ -8,6 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $contenido = trim($_POST['contenido']);
     $id_categoria = (int) $_POST['id_categoria'];
     $id_usuario = $_SESSION['usuario_id']; // o el nombre de tu campo de sesión
+    $fecha_actividad = isset($_POST['fecha_actividad']) ? $_POST['fecha_actividad'] : null;
 
     // Manejo de imagen
     $nombreImagen = null;
@@ -21,8 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     try {
-        $stmt = $pdo->prepare("INSERT INTO publicaciones (titulo, contenido, imagen, id_usuario, id_categoria) VALUES (?, ?, ?, ?, ?)");
-        $stmt->execute([$titulo, $contenido, $nombreImagen, $id_usuario, $id_categoria]);
+        $stmt = $pdo->prepare("INSERT INTO publicaciones (titulo, contenido, imagen, id_usuario, id_categoria, fecha_actividad) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt->execute([$titulo, $contenido, $nombreImagen, $id_usuario, $id_categoria, $fecha_actividad]);
         header("Location: dashboard.php?mensaje=publicacion_creada");
         exit();
     } catch (PDOException $e) {

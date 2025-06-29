@@ -78,7 +78,7 @@ nav ul li a:hover {
     width: 80%;
     background-color: rgb(249, 242, 242);
     border-radius: 8px;
-    border-color: darkcyan
+    border-color: darkcyan;
     border-width: 2px;
     border-style: solid;
     padding: 20px;
@@ -123,7 +123,7 @@ section h2 {
     background-color: var(--blanco);
     border: 1px solid #ddd;
     padding: 20px;
-    width: calc(33% - 20px);
+    width: calc(25% - 20px);
     box-sizing: border-box;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */

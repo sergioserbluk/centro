@@ -46,6 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($mensaje) {
         // Actualizar la respuesta en la base de datos
         $stmt = $pdo->prepare("UPDATE mensajes_contacto SET respuesta = ?, fecha_respuesta = NOW(), id_usuario_respuesta = ? WHERE id = ?");
+        
         $stmt->execute([$respuesta, $_SESSION['usuario_id'], $id]);
 
         $mail = new PHPMailer(true);
