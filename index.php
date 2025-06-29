@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./estilos/style-guide-centro-estudiantes.css">
     <link rel="stylesheet" href="./estilos/estilosindex.css">
     <link rel="shortcut icon" href="./img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./estilos/banner.css">
+    <script src="./js/banner.js" defer></script>
     <style>
         .modal {
             display: flex;
@@ -99,12 +101,11 @@
    
 </header>
  <div>
-        <!-- aca va el video o carrusel de imagenes -->
-        <div class="video-container">
-            <video controls autoplay muted loop>
-                <source src="./videos/intro.mp4" type="video/mp4">
-                Tu navegador no soporta el video.
-            </video>
+    <div class="rotating-banner">
+        <img src="./assets/banners/sitio/banner1.png" class="slide active" alt="Imagen 1">
+        <img src="./assets/banners/sitio/banner2.png" class="slide" alt="Imagen 2">
+        <img src="./assets/banners/sitio/banner3.png" class="slide" alt="Imagen 3">
+    </div>
 </div>
 
 <div class="main-container">
@@ -130,7 +131,7 @@
             $publicaciones = $stmt->fetchAll();
 
             echo "<section id=\"$tituloSeccion\">";
-            echo "<h2>$tituloSeccion</h2>";
+            echo "<h2 class=\"titulo-seccion\">$tituloSeccion</h2>";
             echo "<div class=\"card-container\">";
 
             if ($publicaciones) {
