@@ -124,7 +124,16 @@
         mostrarPublicaciones($pdo, '2', 'Comunicados');
         
         ?>
-    </main>
+</main>
+</div>
+
+<!-- Modal para mostrar las autoridades -->
+<div id="modal-autoridades" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Autoridades del Centro</h2>
+        <img src="./img/organigrama.png" alt="Organigrama del centro de estudiantes" style="max-width:100%; height:auto;" />
+    </div>
 </div>
 
 <footer>
@@ -161,26 +170,55 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-    const modal = document.getElementById("modal-msg");
-    const closeBtn = document.querySelector(".modal .close");
+    const msgModal = document.getElementById("modal-msg");
+    const autoridadesModal = document.getElementById("modal-autoridades");
+    const autoridadesLink = document.querySelector("a[href='#modal-autoridades']");
 
-    if (modal && closeBtn) {
-        closeBtn.onclick = () => {
-            modal.style.display = "none";
-            const url = new URL(window.location);
-            url.searchParams.delete("msg");
-            history.replaceState(null, "", url); // Limpiar la URL
-        };
-
-        window.onclick = (e) => {
-            if (e.target === modal) {
-                modal.style.display = "none";
-                const url = new URL(window.location);
-                url.searchParams.delete("msg");
-                history.replaceState(null, "", url);
-            }
-        };
+    // Abrir modal de autoridades
+    if (autoridadesLink && autoridadesModal) {
+        autoridadesLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            autoridadesModal.style.display = 'flex';
+        });
     }
+
+    function closeModal(modal) {
+        if (modal) {
+            modal.style.display = 'none';
+        }
+    }
+
+    // Cerrar modal de mensaje si existe
+    if (msgModal) {
+        const closeBtn = msgModal.querySelector('.close');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                closeModal(msgModal);
+                const url = new URL(window.location);
+                url.searchParams.delete('msg');
+                history.replaceState(null, '', url);
+            });
+        }
+    }
+
+    // Cerrar modal de autoridades
+    if (autoridadesModal) {
+        const closeBtn = autoridadesModal.querySelector('.close');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => closeModal(autoridadesModal));
+        }
+    }
+
+    window.addEventListener('click', (e) => {
+        if (e.target === msgModal) {
+            closeModal(msgModal);
+            const url = new URL(window.location);
+            url.searchParams.delete('msg');
+            history.replaceState(null, '', url);
+        } else if (e.target === autoridadesModal) {
+            closeModal(autoridadesModal);
+        }
+    });
 });
 </script>
 </body>
