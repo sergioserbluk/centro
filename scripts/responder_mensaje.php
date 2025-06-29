@@ -45,8 +45,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($mensaje) {
         // Actualizar la respuesta en la base de datos
-        $stmt = $pdo->prepare("UPDATE mensajes_contacto SET respuesta = ?, fecha_respuesta = NOW() WHERE id = ?");
-        $stmt->execute([$respuesta, $id]);
+        $stmt = $pdo->prepare("UPDATE mensajes_contacto SET respuesta = ?, fecha_respuesta = NOW(), id_usuario_respuesta = ? WHERE id = ?");
+        $stmt->execute([$respuesta, $_SESSION['usuario_id'], $id]);
 
         $mail = new PHPMailer(true);
         try {
@@ -102,7 +102,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <li><a href="dashboard.php">Inicio</a></li>
                     <li><a href="crear_publicacion.php">Crear Publicación</a></li>
                     <li><a href="dashboard.php">Panel</a></li>
-                    <li><a href="cerrar_sesion.php">Cerrar Sesión</a></li>
+                    <li><a href="logout.php">Cerrar Sesión</a></li>
                 </ul>
             </nav>
         </aside>

@@ -4,7 +4,7 @@ require_once 'conexion.php';
 require_once 'validar_sesion.php';
 
 if (!isset($_GET['id'])) {
-    header("Location: tablero.php");
+    header("Location: dashboard.php");
     exit();
 }
 

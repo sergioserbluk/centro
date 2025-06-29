@@ -37,7 +37,11 @@ CREATE TABLE mensajes_contacto (
     nombre VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
     mensaje TEXT NOT NULL,
-    fecha_envio DATETIME DEFAULT CURRENT_TIMESTAMP
+    respuesta TEXT,
+    fecha_envio DATETIME DEFAULT CURRENT_TIMESTAMP,
+    fecha_respuesta DATETIME,
+    id_usuario_respuesta INT,
+    FOREIGN KEY (id_usuario_respuesta) REFERENCES usuarios(id)
 );
 
 -- Insertar usuario administrador de prueba (clave: admin123, hasheada con password_hash en PHP)
