@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro de Estudiantes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./estilos/style-guide-centro-estudiantes.css">
     <link rel="stylesheet" href="./estilos/estilosindex.css">
     <link rel="shortcut icon" href="./img/favicon/favicon.ico" type="image/x-icon">
@@ -95,7 +96,7 @@
         <h1>Colegio Secundario Barrio Vuelta al Ombú<br> Centro de Estudiantes</h1>
     </div>
     <div class="headerimgcentro">
-        <img src="./img/logoCentro.jpeg" alt="Logo del centro de estudiantes">
+        <img src="./img/logoCentro2.png" alt="Logo del centro de estudiantes">
     </div>
     
    
@@ -193,13 +194,14 @@
 
     <div class="social-media">
         <a href="#" target="_blank" aria-label="Facebook">
-            <img src="img/facebook-icon.png" alt="Facebook">
+            <i class="bi bi-facebook" style="font-size: 2rem; color:rgb(248, 248, 250);"></i>
+
         </a>
         <a href="https://www.instagram.com/col.sec.barriovueltaombu_csvo" target="_blank" aria-label="Instagram">
-            <img src="img/instagram.svg" alt="Instagram">
+            <i class="bi bi-instagram" style="font-size: 2rem; color:rgb(248, 248, 250);"></i>
         </a>
         <a href="#" target="_blank" aria-label="Twitter">
-            <img src="img/twitter-icon.png" alt="Twitter">
+            <i class="bi bi-twitter" style="font-size: 2rem; color:rgb(248, 248, 250);"></i>
         </a>
     </div>
 

@@ -46,7 +46,7 @@ CREATE TABLE mensajes_contacto (
 
 -- Insertar usuario administrador de prueba (clave: admin123, hasheada con password_hash en PHP)
 INSERT INTO usuarios (nombre_usuario, clave, correo) VALUES 
-('admin', '$2y$10$zFChcwkuLNyMZ/3Z1OfK1eGpLnKLkS2bTtT0Kf2C2A4jZo3QfHK7a', 'admin@colegio.edu.ar');
+('admin', '$2y$10$KU5h2at9zvX7zUoGBLsbveSjr3gwmeZ1cOaem03q0hMbisRMeV5Pu', 'admin@colegio.edu.ar');
 
 -- Insertar categorías de prueba
 INSERT INTO categorias (nombre_categoria, descripcion) VALUES
