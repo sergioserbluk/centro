@@ -53,6 +53,7 @@
 <?php endif; ?>
 
 <header>
+    
     <div class="headerimglogo">
         <img src="./img/insigniaESVO-removebg-preview.png" alt="Logo de la escuela ESVO">
     </div>
@@ -62,15 +63,25 @@
     <div class="headerimgcentro">
         <img src="./img/logoCentro.jpeg" alt="Logo del centro de estudiantes">
     </div>
+    
+   
 </header>
+ <div>
+        <!-- aca va el video o carrusel de imagenes -->
+        <div class="video-container">
+            <video controls autoplay muted loop>
+                <source src="./videos/intro.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+            </video>
+</div>
 
 <div class="main-container">
     <aside>
         <nav>
             <ul>
                 <li><a href="#Eventos">Eventos</a></li>
+                <li><a href="#Actividades">Actividades</a></li>
                 <li><a href="#Comunicados">Comunicados</a></li>
-                <li><a href="#En acción">En acción</a></li>
                 <li><a href="#contacto-form">Contacto</a></li>
                 <li><a href="./pages/login.html">Iniciar sesión</a></li>
             </ul>
@@ -109,7 +120,7 @@
         // Mostrar cada sección
         mostrarPublicaciones($pdo, '1', 'Eventos');
         mostrarPublicaciones($pdo, '2', 'Comunicados');
-        mostrarPublicaciones($pdo, '3', 'En acción');
+        mostrarPublicaciones($pdo, '3', 'Actividades');
         ?>
     </main>
 </div>
@@ -133,7 +144,7 @@
         <a href="#" target="_blank" aria-label="Facebook">
             <img src="img/facebook-icon.png" alt="Facebook">
         </a>
-        <a href="./img/instagram-icon.png" target="_blank" aria-label="Instagram">
+        <a href="https://www.instagram.com/col.sec.barriovueltaombu_csvo" target="_blank" aria-label="Instagram">
             <img src="img/instagram.svg" alt="Instagram">
         </a>
         <a href="#" target="_blank" aria-label="Twitter">
