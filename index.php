@@ -115,7 +115,7 @@
                 <li><a href="#Eventos">Eventos</a></li>
                 <li><a href="#Actividades">Actividades</a></li>
                 <li><a href="#Comunicados">Comunicados</a></li>
-                <li><a href="#contacto-form">Contacto</a></li>
+                <li><a href="#modal-contacto">Contacto</a></li>
                 <li><a href="#modal-autoridades">Autoridades</a></li>
                 <li><a href="./pages/login.html">Iniciar sesión</a></li>
             </ul>
@@ -169,20 +169,27 @@
     </div>
 </div>
 
+<!-- Modal de contacto -->
+<div id="modal-contacto" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <form action="scripts/contacto.php" method="post" id="contacto-form">
+            <h2>Déjanos tu mensaje</h2>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</div>
+
 <footer>
-    <form action="scripts/contacto.php" method="post" id="contacto-form">
-        <h2>Déjanos tu mensaje</h2>
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" required></textarea>
-
-        <button type="submit">Enviar</button>
-    </form>
 
     <div class="social-media">
         <a href="#" target="_blank" aria-label="Facebook">
@@ -206,6 +213,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const msgModal = document.getElementById("modal-msg");
     const autoridadesModal = document.getElementById("modal-autoridades");
     const autoridadesLink = document.querySelector("a[href='#modal-autoridades']");
+    const contactoModal = document.getElementById("modal-contacto");
+    const contactoLink = document.querySelector("a[href='#modal-contacto']");
     const organigramaContainer = document.getElementById("organigrama");
 
     function crearNodo(persona) {
@@ -253,6 +262,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // Abrir modal de contacto
+    if (contactoLink && contactoModal) {
+        contactoLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            contactoModal.style.display = 'flex';
+        });
+    }
+
     function closeModal(modal) {
         if (modal) {
             modal.style.display = 'none';
@@ -280,6 +297,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // Cerrar modal de contacto
+    if (contactoModal) {
+        const closeBtn = contactoModal.querySelector('.close');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => closeModal(contactoModal));
+        }
+    }
+
     window.addEventListener('click', (e) => {
         if (e.target === msgModal) {
             closeModal(msgModal);
@@ -288,6 +313,8 @@ document.addEventListener("DOMContentLoaded", () => {
             history.replaceState(null, '', url);
         } else if (e.target === autoridadesModal) {
             closeModal(autoridadesModal);
+        } else if (e.target === contactoModal) {
+            closeModal(contactoModal);
         }
     });
 });

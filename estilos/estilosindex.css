@@ -195,6 +195,38 @@ footer button:hover {
     background-color: var(--verde-medio);
     color: var(--blanco);
 }
+
+/* Formulario de contacto en modal */
+#modal-contacto form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#modal-contacto input,
+#modal-contacto textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: none;
+}
+
+#modal-contacto button {
+    background-color: var(--amarillo);
+    color: var(--negro);
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+#modal-contacto button:hover {
+    background-color: var(--verde-medio);
+    color: var(--blanco);
+}
 header p a{
     background-color: var(--blanco);
     border-radius: 3px;
