@@ -40,6 +40,38 @@
             font-size: 1.5rem;
             cursor: pointer;
         }
+
+        /* === Organigrama === */
+        #organigrama ul {
+            list-style: none;
+            padding-left: 1.5rem;
+            border-left: 2px solid #ddd;
+            margin-left: 1rem;
+        }
+
+        #organigrama li {
+            margin: 0.5rem 0;
+            position: relative;
+        }
+
+        #organigrama li::before {
+            content: "";
+            position: absolute;
+            left: -1.5rem;
+            top: 0.9rem;
+            width: 1.5rem;
+            height: 2px;
+            background: #ddd;
+        }
+
+        .org-nodo {
+            background: linear-gradient(135deg, #4facfe 0%, #f093fb 100%);
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: bold;
+            display: inline-block;
+        }
     </style>
 </head>
 <body>
@@ -132,7 +164,7 @@
     <div class="modal-content">
         <span class="close">&times;</span>
         <h2>Autoridades del Centro</h2>
-        <img src="./img/organigrama.png" alt="Organigrama del centro de estudiantes" style="max-width:100%; height:auto;" />
+        <div id="organigrama"></div>
     </div>
 </div>
 
@@ -173,12 +205,50 @@ document.addEventListener("DOMContentLoaded", () => {
     const msgModal = document.getElementById("modal-msg");
     const autoridadesModal = document.getElementById("modal-autoridades");
     const autoridadesLink = document.querySelector("a[href='#modal-autoridades']");
+    const organigramaContainer = document.getElementById("organigrama");
+
+    function crearNodo(persona) {
+        const li = document.createElement('li');
+        const nodo = document.createElement('div');
+        nodo.className = 'org-nodo';
+        if (persona.cargo && persona.nombre) {
+            nodo.textContent = `${persona.cargo}: ${persona.nombre}`;
+        } else if (persona.cargo) {
+            nodo.textContent = persona.cargo;
+        } else {
+            nodo.textContent = persona.nombre;
+        }
+        li.appendChild(nodo);
+
+        const hijos = persona.subordinados || persona.miembros;
+        if (hijos && hijos.length) {
+            const ul = document.createElement('ul');
+            hijos.forEach(hijo => ul.appendChild(crearNodo(hijo)));
+            li.appendChild(ul);
+        }
+        return li;
+    }
+
+    function cargarAutoridades() {
+        fetch('./assets/autoridades.json')
+            .then(res => res.json())
+            .then(data => {
+                organigramaContainer.innerHTML = '';
+                const ul = document.createElement('ul');
+                data.autoridades.forEach(a => ul.appendChild(crearNodo(a)));
+                organigramaContainer.appendChild(ul);
+            })
+            .catch(() => {
+                organigramaContainer.textContent = 'No se pudo cargar el organigrama.';
+            });
+    }
 
     // Abrir modal de autoridades
     if (autoridadesLink && autoridadesModal) {
         autoridadesLink.addEventListener('click', (e) => {
             e.preventDefault();
             autoridadesModal.style.display = 'flex';
+            cargarAutoridades();
         });
     }
 
