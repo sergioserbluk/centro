@@ -83,6 +83,7 @@
                 <li><a href="#Actividades">Actividades</a></li>
                 <li><a href="#Comunicados">Comunicados</a></li>
                 <li><a href="#contacto-form">Contacto</a></li>
+                <li><a href="#modal-autoridades">Autoridades</a></li>
                 <li><a href="./pages/login.html">Iniciar sesión</a></li>
             </ul>
         </nav>
@@ -92,7 +93,7 @@
         <?php
         // Función para renderizar publicaciones por categoría
         function mostrarPublicaciones($pdo, $categoria, $tituloSeccion) {
-            $stmt = $pdo->prepare("SELECT * FROM publicaciones WHERE id_categoria = ?");
+            $stmt = $pdo->prepare("SELECT * FROM publicaciones WHERE id_categoria = ? ORDER BY fecha_actividad DESC");
             $stmt->execute([$categoria]);
             $publicaciones = $stmt->fetchAll();
 
@@ -119,8 +120,9 @@
 
         // Mostrar cada sección
         mostrarPublicaciones($pdo, '1', 'Eventos');
-        mostrarPublicaciones($pdo, '2', 'Comunicados');
         mostrarPublicaciones($pdo, '3', 'Actividades');
+        mostrarPublicaciones($pdo, '2', 'Comunicados');
+        
         ?>
     </main>
 </div>
