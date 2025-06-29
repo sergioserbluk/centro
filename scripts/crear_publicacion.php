@@ -29,6 +29,8 @@ try {
     <form action="procesar_crear_publicacion.php"  method="post" enctype="multipart/form-data">
         <label for="titulo">Título:</label>
         <input type="text" name="titulo" id="titulo" required><br>
+        <label for="fecha_actividad">Fecha de la Actividad:</label>
+        <input type="date" name="fecha_actividad" id="fecha_actividad" required><br>
 
         <label for="contenido">Contenido:</label><br>
         <textarea name="contenido" id="contenido" rows="6" required></textarea><br>
