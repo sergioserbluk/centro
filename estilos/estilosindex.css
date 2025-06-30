@@ -232,6 +232,17 @@ footer .copyright {
         flex-direction: column; /* Coloca los elementos uno debajo del otro en pantallas pequeñas */
     }
 
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header img {
+        width: 80px;
+        height: auto;
+        margin: 0 0 1rem 0;
+    }
+
     aside {
         width: 100%; /* El aside ocupa el 100% en pantallas pequeñas */
         height: auto; /* No es necesario que ocupe toda la altura */
