@@ -11,6 +11,7 @@ try {
             publicaciones.contenido,
             publicaciones.imagen,
             publicaciones.fecha_publicacion,
+            publicaciones.fecha_actividad,
             categorias.nombre_categoria
         FROM publicaciones
         INNER JOIN categorias ON publicaciones.id_categoria = categorias.id
@@ -35,6 +36,7 @@ try {
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../estilos/style-guide-centro-estudiantes.css">
     <link rel="stylesheet" href="../estilos/estilosindex.css">
     <link rel="shortcut icon" href="../img/favicon/favicon.ico" type="image/x-icon">
@@ -116,7 +118,8 @@ try {
                 <tr>
                     <th>Título</th>
                     <th>Categoría</th>
-                    <th>Fecha</th>
+                    <th>Fecha de publicación</th>
+                    <th>Fecha de actividad</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -126,6 +129,7 @@ try {
                     <td><?= htmlspecialchars($pub['titulo']) ?></td>
                     <td><?= htmlspecialchars($pub['nombre_categoria']) ?></td>
                     <td><?= htmlspecialchars($pub['fecha_publicacion']) ?></td>
+                    <td><?= htmlspecialchars($pub['fecha_actividad']) ?></td>
                     <td>
                         <a href="editar_publicacion.php?id=<?= $pub['id'] ?>">Editar</a> |
                         <a href="eliminar_publicacion.php?id=<?= $pub['id'] ?>" onclick="return confirm('¿Seguro que querés eliminar esta publicación?');">Eliminar</a>

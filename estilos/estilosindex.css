@@ -17,6 +17,12 @@ header {
     background-color: var(--verde-oscuro);
     color: var(--blanco);
     padding: 1rem;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas estrechas */
+}
+
+.headertitulo {
+    flex: 1;
+    text-align: center;
 }
 
 h1 {
@@ -29,9 +35,7 @@ h2{
 header img{
     width: 100px;
     height: 120px;
-    margin-left: 50px;
-    margin-right: 50px;
-
+    margin: 0 1rem;
 }
 
 /* === Barra Lateral === */
@@ -230,6 +234,17 @@ footer .copyright {
 @media (max-width: 768px) {
     .main-container {
         flex-direction: column; /* Coloca los elementos uno debajo del otro en pantallas pequeñas */
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header img {
+        width: 80px;
+        height: auto;
+        margin: 0 0 1rem 0;
     }
 
     aside {
