@@ -90,7 +90,7 @@
 <header>
     
     <div class="headerimglogo">
-        <img src="./img/insigniaESVO-sinfondo.png" alt="Logo de la escuela ESVO">
+        <img src="./img/insigniaESVO-removebg-preview.png" alt="Logo de la escuela ESVO">
     </div>
     <div class="headertitulo">
         <h1>Colegio Secundario Barrio Vuelta al Ombú<br> Centro de Estudiantes</h1>
@@ -131,8 +131,8 @@
             $stmt->execute([$categoria]);
             $publicaciones = $stmt->fetchAll();
 
-            echo "<section id=\"$tituloSeccion\">";
-            echo "<h2 class=\"titulo-seccion\">$tituloSeccion</h2>";
+            echo "<section id=\"usados\">";
+            echo "<h2 class=\"titulo-seccion\">usados</h2>";
             echo "<div class=\"card-container\">";
 
             if ($publicaciones) {

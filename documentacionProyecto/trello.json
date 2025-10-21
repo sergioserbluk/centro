@@ -1,0 +1,67 @@
+{
+  "name": "Expo Robótica 2025 - Centro de Estudiantes",
+  "lists": [
+    { "name": "🔜 Por hacer" },
+    { "name": "🛠️ En progreso" },
+    { "name": "🧐 En revisión" },
+    { "name": "✅ Terminado" }
+  ],
+  "cards": [
+    {
+      "name": "Semana 1 - Aterrizaje 🔵",
+      "desc": "• Confirmar los 4 equipos de trabajo\n• Revisión general de objetivos del proyecto\n• Crear estructura de carpetas en el entorno local\n• Configurar XAMPP o servidor local\n• Crear repositorio compartido por equipo (Drive o GitHub)"
+    },
+    {
+      "name": "Semana 2 - Maquetado index 🟡",
+      "desc": "• Crear archivo index.html / index.php\n• Incorporar estructura básica: header, main, footer\n• Aplicar estilos con CSS\n• Agregar menú de navegación inicial"
+    },
+    {
+      "name": "Semana 3 - Login y autenticación 🟡",
+      "desc": "• Crear formulario de login\n• Implementar lógica de verificación de usuario en PHP\n• Activar sesiones y proteger dashboard.php\n• Agregar validaciones básicas"
+    },
+    {
+      "name": "Semana 4 - Diseño del panel y estructura base 🟡",
+      "desc": "• Maquetar dashboard.php\n• Crear menú interno del panel\n• Agregar botones para crear/editar/eliminar publicaciones"
+    },
+    {
+      "name": "Semana 5 - CRUD de publicaciones 🟠",
+      "desc": "• Crear base de datos y tabla 'publicaciones'\n• Crear script para insertar publicación\n• Listar publicaciones en el panel\n• Agregar botones de editar y eliminar"
+    },
+    {
+      "name": "Semana 6 - Gestión de imágenes 🟠",
+      "desc": "• Permitir subir imágenes con las publicaciones\n• Guardar ruta en la base de datos\n• Mostrar imágenes en la vista pública"
+    },
+    {
+      "name": "Semana 7 - Formulario de contacto 🔴",
+      "desc": "• Crear sección 'Contacto' en el sitio\n• Implementar formulario con nombre, email y mensaje\n• Guardar los mensajes en la base de datos"
+    },
+    {
+      "name": "Semana 8 - Respuesta desde el dashboard 🔴",
+      "desc": "• Crear listado de mensajes en dashboard\n• Implementar formulario de respuesta\n• Enviar email de respuesta desde el sistema"
+    },
+    {
+      "name": "Semana 9 - Seguridad y validaciones 🟣",
+      "desc": "• Validar todos los formularios del sitio\n• Agregar confirmaciones antes de borrar datos\n• Proteger scripts con sesión activa"
+    },
+    {
+      "name": "Semana 10 - Manejo de errores 🟣",
+      "desc": "• Crear mensajes de error y éxito visibles\n• Redireccionar según resultados\n• Validación de formularios con JS y PHP"
+    },
+    {
+      "name": "Semana 11 - Responsive y ajustes finales ⚫",
+      "desc": "• Agregar media queries para adaptación móvil\n• Ajustar diseño con Flexbox o Grid\n• Revisar ortografía y enlaces"
+    },
+    {
+      "name": "Semana 12 - Documentación 📄",
+      "desc": "• Elaborar carpeta de proyecto\n• Documentar estructura y código\n• Incluir capturas y reflexiones\n• Subir a Drive o entregar en físico"
+    },
+    {
+      "name": "Semana 13 - Ensayos y presentación 🎤",
+      "desc": "• Organizar roles de expositores\n• Preparar afiches y soporte visual\n• Hacer ensayo general con simulación"
+    },
+    {
+      "name": "Semana 14 - Presentación final ⭐",
+      "desc": "• Exponer en Expo Robótica\n• Preparar stand\n• Evaluación general del trabajo en equipo"
+    }
+  ]
+}
