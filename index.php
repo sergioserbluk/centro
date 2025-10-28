@@ -53,9 +53,8 @@
 <?php endif; ?>
 
 <header>
-    
     <div class="headerimglogo">
-        <img src="./img/insigniaESVO-removebg-preview.png" alt="Logo de la escuela ESVO">
+        <img src="./img/insigniaESVO.png" alt="Logo de la escuela ESVO">
     </div>
     <div class="headertitulo">
         <h1>Colegio Secundario Barrio Vuelta al Ombú<br> Centro de Estudiantes</h1>
@@ -63,8 +62,6 @@
     <div class="headerimgcentro">
         <img src="./img/logoCentro.jpeg" alt="Logo del centro de estudiantes">
     </div>
-    
-   
 </header>
  <div>
         <!-- aca va el video o carrusel de imagenes -->
